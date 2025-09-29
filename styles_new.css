@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset and Base Styles - Magical Forest Theme */
 * {
   margin: 0;
   padding: 0;
@@ -6,48 +6,70 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f1419, #1a2332);
   color: #fff;
   overflow-x: hidden;
   line-height: 1.6;
+  cursor: default;
 }
 
-/* Loading Screen */
+/* Loading Screen - Enchanted Style */
 #loading-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255, 165, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34, 139, 34, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0e27, #1a1a3e);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transition: opacity 0.5s ease-out;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  transform: scale(1.1);
 }
 
 .loading-content {
   text-align: center;
   color: #fff;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 .loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255, 165, 0, 0.3);
-  border-top: 3px solid #ffa500;
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 165, 0, 0.2);
+  border-top: 4px solid #ffa500;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 1.5s linear infinite, glow 2s ease-in-out infinite alternate;
   margin: 0 auto 20px;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  from { 
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
   }
-  100% {
+  to { 
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.8), 0 0 40px rgba(255, 165, 0, 0.3);
+  }
     transform: rotate(360deg);
   }
 }

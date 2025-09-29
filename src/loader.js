@@ -1,7 +1,10 @@
 // loader.js - GLTFLoader wrapper with progress handling
+import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
 export class AssetLoader {
   constructor() {
-    this.loader = new THREE.GLTFLoader();
+    this.loader = new GLTFLoader();
     this.textureLoader = new THREE.TextureLoader();
     this.loadedAssets = new Map();
   }

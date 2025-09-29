@@ -1,0 +1,26 @@
+// test_main.js - Minimal test to verify imports work
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+console.log('🔍 Testing imports...');
+console.log('THREE:', THREE);
+console.log('OrbitControls:', OrbitControls);
+
+// Test basic scene creation
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+
+console.log('✅ Basic Three.js objects created successfully');
+console.log('Scene:', scene);
+console.log('Camera:', camera);
+console.log('Renderer:', renderer);
+
+// Add a simple cube to test
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+console.log('✅ Test cube created and added to scene');
+console.log('Cube:', cube);

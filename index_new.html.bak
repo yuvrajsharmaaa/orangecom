@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orange Company - Magical Forest Experience</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Three.js CDN (Latest) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r155/three.min.js"></script>
@@ -42,14 +42,8 @@
     <canvas id="three-canvas"></canvas>
 
     <!-- End Video (Hidden Initially) -->
-    <video
-      id="end-video"
-      muted
-      playsinline
-      preload="metadata"
-      style="display: none"
-    >
-      <source src="./assets/models/endvideo.mp4" type="video/mp4" />
+    <video id="end-video" muted playsinline preload="metadata" style="display: none;">
+      <source src="./assets/endvideo.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
@@ -57,12 +51,8 @@
     <div class="scroll-content">
       <section class="section forest-section">
         <div class="content">
-          <h1 class="fade-in magical-title">
-            🌟 Welcome to the Enchanted Forest
-          </h1>
-          <p class="fade-in">
-            Where fireflies dance and oranges hold magical secrets
-          </p>
+          <h1 class="fade-in magical-title">🌟 Welcome to the Enchanted Forest</h1>
+          <p class="fade-in">Where fireflies dance and oranges hold magical secrets</p>
           <button class="cta-button fade-in">Begin Journey</button>
         </div>
       </section>
@@ -70,9 +60,7 @@
       <section class="section journey-section">
         <div class="content">
           <h2 class="fade-in">🧚‍♀️ Follow the Fireflies</h2>
-          <p class="fade-in">
-            Let their gentle glow guide you deeper into the mystery
-          </p>
+          <p class="fade-in">Let their gentle glow guide you deeper into the mystery</p>
         </div>
       </section>
 
@@ -86,9 +74,7 @@
       <section class="section transformation-section">
         <div class="content">
           <h2 class="fade-in">✨ Magical Transformation</h2>
-          <p class="fade-in">
-            Watch as nature's gift becomes something extraordinary
-          </p>
+          <p class="fade-in">Watch as nature's gift becomes something extraordinary</p>
         </div>
       </section>
 
@@ -103,5 +89,26 @@
 
     <!-- Import ES Module Script -->
     <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
+
+      <section class="section section-3">
+        <div class="content">
+          <h2 class="fade-in">The Heart of Nature</h2>
+          <p class="fade-in">Every journey begins with a single step</p>
+        </div>
+      </section>
+
+      <section class="section section-4">
+        <div class="content">
+          <h2 class="fade-in">Orange Company</h2>
+          <p class="fade-in">Where innovation meets nature</p>
+          <button class="cta-button fade-in">Explore More</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
