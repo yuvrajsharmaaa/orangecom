@@ -2,103 +2,101 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeff's Website</title>
+    <title>Orange Company - Magical Forest Experience</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Import Map for Three.js ES Modules -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- GSAP CDN with ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
   </head>
   <body>
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas" class="three-canvas"></canvas>
 
-    <canvas id="bg"></canvas>   
-
-    <main>
-
-      <header>
-        <h1>Jeff Delaney</h1>
-        <p>🚀 Welcome to my website!</p>
-      </header>
-
-
-      <blockquote>
-        <p>I like making stuff and putting it on the internet</p>
-      </blockquote>
-
-      <section>
-        <h2>📜 Manifesto</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
+    <!-- Scroll Content Container -->
+    <div class="scroll-content">
+      <!-- Section 1: Forest Introduction -->
+      <section class="scroll-section section-forest">
+        <div class="content-wrapper">
+          <div class="text-content fade-in">
+            <h1 class="main-title">🌟 Welcome to the Enchanted Forest</h1>
+            <p class="subtitle">Where fireflies dance and oranges hold magical secrets</p>
+            <button class="cta-button">Begin Your Journey</button>
+          </div>
+        </div>
       </section>
 
-      <section class="light">
-        <h2>👩🏽‍🚀 Projects</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <h2>🏆 Accomplishments</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
+      <!-- Section 2: Firefly Journey -->
+      <section class="scroll-section section-fireflies">
+        <div class="content-wrapper">
+          <div class="text-content fade-in">
+            <h2 class="section-title">🧚‍♀️ Follow the Fireflies</h2>
+            <p class="section-description">Let their gentle glow guide you deeper into the mystery of the forest</p>
+          </div>
+        </div>
       </section>
 
-      <blockquote>
-        <p>The best way out is always through <br>-Robert Frost</p>
-      </blockquote>
-
-      <section class="left">
-        <h2>🌮 Work History</h2>
-
-        <h3>McDonalds</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Burger King</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Taco Bell</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
+      <!-- Section 3: Orange Discovery -->
+      <section class="scroll-section section-orange">
+        <div class="content-wrapper">
+          <div class="text-content fade-in">
+            <h2 class="section-title">🍊 The Golden Treasure</h2>
+            <p class="section-description">One orange glows brighter than all the rest, calling to you</p>
+          </div>
+        </div>
       </section>
 
-      <blockquote>
-        <p>Thanks for watching!</p>
-      </blockquote>
+      <!-- Section 4: Transformation -->
+      <section class="scroll-section section-transformation">
+        <div class="content-wrapper">
+          <div class="text-content fade-in">
+            <h2 class="section-title">✨ Magical Transformation</h2>
+            <p class="section-description">Watch as nature's gift becomes something extraordinary</p>
+          </div>
+        </div>
+      </section>
 
+      <!-- Section 5: Company Reveal -->
+      <section class="scroll-section section-company">
+        <div class="content-wrapper">
+          <div class="text-content fade-in">
+            <h1 class="company-title">🏢 Orange Company</h1>
+            <p class="company-tagline">Where magic meets innovation</p>
+            <div class="cta-buttons">
+              <button class="cta-button primary">Explore Our World</button>
+              <button class="cta-button secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-    </main>
-    
-    <script type="module" src="/main.js"></script>
+    <!-- End Video (Hidden Initially) -->
+    <video id="end-video" class="end-video" muted playsinline preload="metadata">
+      <source src="./assets/models/endvideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
+    <!-- Debug Info (Development Only) -->
+    <div id="debug-info" class="debug-info">
+      <div id="scroll-progress">Scroll: 0%</div>
+      <div id="current-section">Section: 1</div>
+      <div id="camera-position">Camera: (0, 0, 0)</div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Initialize App -->
+    <script type="module" src="./src/main_new.js"></script>
   </body>
 </html>

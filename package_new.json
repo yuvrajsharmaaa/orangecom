@@ -1,0 +1,44 @@
+{
+  "name": "threejs-scroll-landing-page",
+  "version": "1.0.0",
+  "description": "Professional landing page with scroll-driven 3D storytelling using Three.js and GSAP ScrollTrigger",
+  "main": "index_new.html",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "npx serve .",
+    "start": "npx serve . --single"
+  },
+  "devDependencies": {
+    "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "three": "^0.155.0",
+    "gsap": "^3.12.2"
+  },
+  "keywords": [
+    "threejs",
+    "three.js",
+    "webgl",
+    "gsap",
+    "scrolltrigger",
+    "animation",
+    "3d",
+    "landing-page",
+    "scroll-driven",
+    "interactive"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/your-repo-name.git"
+  },
+  "homepage": "https://yourusername.github.io/your-repo-name/",
+  "browserslist": ["> 1%", "last 2 versions", "not dead"],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

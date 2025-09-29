@@ -1,12 +1,16 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
     hmr: {
-      overlay: false
-    }
+      overlay: false,
+    },
   },
   optimizeDeps: {
-    include: ['three', 'three/examples/jsm/controls/OrbitControls', 'three/examples/jsm/loaders/GLTFLoader']
-  }
-})
+    include: [
+      "three",
+      "three/examples/jsm/controls/OrbitControls",
+      "three/examples/jsm/loaders/GLTFLoader",
+    ],
+  },
+});
