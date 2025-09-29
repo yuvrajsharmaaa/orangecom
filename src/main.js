@@ -1,4 +1,5 @@
 // main.js - Scene setup, renderer, resize, render loop
+import "../style.css"; // Import CSS for Vite build
 import { AssetLoader } from "./loader.js";
 import { FireflySystem } from "./fireflies.js";
 import { ScrollAnimations } from "./animations.js";
